@@ -1,0 +1,132 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@400;600;700&display=swap');
+  .port-root { font-family: 'Sora', sans-serif; padding: 0; color: var(--color-text-primary); }
+  .hero { background: #0a0a0a; color: #f0f0f0; padding: 2.5rem 2rem 2rem; border-radius: var(--border-radius-lg); margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: #5DCAA5; opacity: 0.12; }
+  .hero::after { content: ''; position: absolute; bottom: -30px; left: 30px; width: 120px; height: 120px; border-radius: 50%; background: #7F77DD; opacity: 0.1; }
+  .hero-tag { font-family: 'Space Mono', monospace; font-size: 11px; color: #5DCAA5; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .hero-name { font-size: 32px; font-weight: 700; margin: 0 0 0.25rem; line-height: 1.1; }
+  .hero-name span { color: #5DCAA5; }
+  .hero-sub { font-size: 14px; color: #999; margin: 0 0 1.5rem; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge { font-family: 'Space Mono', monospace; font-size: 11px; padding: 4px 10px; border-radius: 4px; border: 1px solid #333; color: #ccc; background: #111; }
+  .badge.green { border-color: #1D9E75; color: #5DCAA5; background: rgba(29,158,117,0.08); }
+  .section-title { font-size: 11px; font-family: 'Space Mono', monospace; letter-spacing: 2px; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 1rem; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
+  .skill-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 0.875rem 1rem; transition: border-color 0.2s; cursor: default; }
+  .skill-card:hover { border-color: var(--color-border-secondary); }
+  .skill-icon { font-size: 16px; margin-bottom: 6px; }
+  .skill-name { font-size: 13px; font-weight: 600; margin: 0 0 2px; }
+  .skill-level { font-size: 11px; color: var(--color-text-secondary); }
+  .skill-bar { height: 3px; background: var(--color-border-tertiary); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+  .skill-fill { height: 100%; background: #1D9E75; border-radius: 2px; }
+  .interest-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+  .interest-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; text-align: center; border: 0.5px solid var(--color-border-tertiary); }
+  .interest-card .ico { font-size: 22px; margin-bottom: 6px; }
+  .interest-card .ilabel { font-size: 12px; font-weight: 600; margin: 0 0 2px; }
+  .interest-card .idesc { font-size: 11px; color: var(--color-text-secondary); }
+  .traits { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+  .trait { font-size: 12px; padding: 5px 12px; border-radius: 20px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+  .cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .cta-btn { font-size: 13px; padding: 8px 18px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-primary); cursor: pointer; font-family: 'Sora', sans-serif; }
+  .cta-btn:hover { background: var(--color-background-secondary); }
+  .cta-btn.primary { background: #0a0a0a; color: #f0f0f0; border-color: #0a0a0a; }
+  .cta-btn.primary:hover { background: #222; }
+  .uni-row { display: flex; align-items: center; gap: 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.875rem 1rem; margin-bottom: 1.5rem; border: 0.5px solid var(--color-border-tertiary); }
+  .uni-dot { width: 36px; height: 36px; border-radius: 50%; background: #0a0a0a; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-size: 10px; color: #5DCAA5; font-weight: 700; flex-shrink: 0; }
+  .uni-name { font-size: 13px; font-weight: 600; margin: 0 0 2px; }
+  .uni-sub { font-size: 11px; color: var(--color-text-secondary); }
+</style>
+<div class="port-root">
+  <h2 class="sr-only">Portfolio card for Nikhil Sharma, CSE student at Manav Rachna International Institute of Research and Studies</h2>
+
+  <div class="hero">
+    <div class="hero-tag">Portfolio · CSE Student</div>
+    <div class="hero-name"><span>Nikhil</span> Sharma</div>
+    <div class="hero-sub">Computer Science & Engineering · MRIIRS</div>
+    <div class="hero-badges">
+      <span class="badge green">Quick Learner</span>
+      <span class="badge green">Problem Solver</span>
+      <span class="badge">Team Player</span>
+      <span class="badge">Tech Enthusiast</span>
+    </div>
+  </div>
+
+  <div class="uni-row">
+    <div class="uni-dot">MR</div>
+    <div>
+      <div class="uni-name">Manav Rachna International Institute of Research & Studies</div>
+      <div class="uni-sub">B.Tech — Computer Science & Engineering</div>
+    </div>
+  </div>
+
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">HTML</div>
+      <div class="skill-level">Frontend</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">☕</div>
+      <div class="skill-name">Java</div>
+      <div class="skill-level">OOP</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-name">C / C++</div>
+      <div class="skill-level">Systems</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🗄️</div>
+      <div class="skill-name">SQL</div>
+      <div class="skill-level">Databases</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🌲</div>
+      <div class="skill-name">DSA</div>
+      <div class="skill-level">Algorithms</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
+  </div>
+
+  <div class="section-title">Areas of Interest</div>
+  <div class="interest-row">
+    <div class="interest-card">
+      <div class="ico">🌲</div>
+      <div class="ilabel">Data Structures</div>
+      <div class="idesc">Trees, Graphs, DP</div>
+    </div>
+    <div class="interest-card">
+      <div class="ico">🖥️</div>
+      <div class="ilabel">Operating Systems</div>
+      <div class="idesc">Processes & Memory</div>
+    </div>
+    <div class="interest-card">
+      <div class="ico">🌐</div>
+      <div class="ilabel">Computer Networks</div>
+      <div class="idesc">Protocols & Architecture</div>
+    </div>
+  </div>
+
+  <div class="section-title">Strengths</div>
+  <div class="traits">
+    <span class="trait">Mini-projects in electronics & programming</span>
+    <span class="trait">Technical quiz participant</span>
+    <span class="trait">Workshop attendee</span>
+    <span class="trait">Strong teamwork</span>
+    <span class="trait">Passion for new technologies</span>
+  </div>
+
+  <div class="section-title">Explore</div>
+  <div class="cta-row">
+    <button class="cta-btn primary" onclick="sendPrompt('What projects should Nikhil build to strengthen his CSE portfolio?')">Suggest projects ↗</button>
+    <button class="cta-btn" onclick="sendPrompt('Give Nikhil a DSA practice roadmap')">DSA roadmap ↗</button>
+    <button class="cta-btn" onclick="sendPrompt('What should Nikhil learn next after C++ and Java?')">What to learn next ↗</button>
+  </div>
+</div>
